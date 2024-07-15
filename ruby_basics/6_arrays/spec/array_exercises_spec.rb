@@ -49,12 +49,12 @@ RSpec.describe 'Array Exercises' do
 
   describe 'add element exercise' do
 
-    xit 'increases the length of an array by 1' do
+    it 'increases the length of an array by 1' do
       numbers = [1, 2, 3, 4]
       expect { add_element(numbers) }.to change { numbers.length }.by(1)
     end
 
-    xit 'increases the length of an empty array by 1' do
+    it 'increases the length of an empty array by 1' do
       data = []
       expect { add_element(data) }.to change { data.length }.by(1)
     end
@@ -62,33 +62,33 @@ RSpec.describe 'Array Exercises' do
 
   describe 'remove last element exercise' do
 
-    xit 'returns the array without the last element' do
+    it 'returns the array without the last element' do
       expect(remove_last_element([1, 3, 5])).to eq([1, 3])
     end
 
-    xit 'returns an empty array when the array only has one element' do
+    it 'returns an empty array when the array only has one element' do
       expect(remove_last_element(['foo'])).to eq([])
     end
   end
 
   describe 'remove first three elements exercise' do
 
-    xit 'returns the array without the first three elements' do
+    it 'returns the array without the first three elements' do
       expect(remove_first_three_elements([1, 3, 5, 7, 9])).to eq([7, 9])
     end
 
-    xit 'returns an empty array when the array has less than 3 elements' do
+    it 'returns an empty array when the array has less than 3 elements' do
       expect(remove_first_three_elements(['foo', 'bar'])).to eq([])
     end
   end
 
   describe 'array concatenation exercise' do
 
-    xit 'returns an array adding two arrays of numbers together' do
+    it 'returns an array adding two arrays of numbers together' do
       expect(array_concatenation([1, 3, 5], [2, 4, 6])).to eq([1, 3, 5, 2, 4, 6])
     end
 
-    xit 'returns an array adding arrays of strings and numbers together' do
+    it 'returns an array adding arrays of strings and numbers together' do
       expect(array_concatenation(['a', 'b', 'c'], [1, 2, 3])).to eq(['a', 'b', 'c', 1, 2, 3])
     end
   end
